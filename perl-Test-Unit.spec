@@ -22,7 +22,7 @@ Summary(ru):	Модуль для Perl Test::Unit
 Summary(sv):	Test::Unit Perlmodul
 Summary(uk):	Модуль для Perl Test::Unit
 Summary(zh_CN):	Test::Unit Perl дё©И
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-Test-Unit
 Version:	0.24
 Release:	4
 # same as perl
