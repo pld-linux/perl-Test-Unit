@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Test
@@ -30,7 +30,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	e05b5e2f0cd2d9537d63b7a9471eed5d
 BuildRequires:	perl-devel >= 5
-%if %{!?_without_tests:1}0
+%if %{with tests}
 BuildRequires:	perl-Class-Inner
 BuildRequires:	perl-Devel-Symdump
 BuildRequires:	perl-Error
@@ -61,12 +61,13 @@ obiektowo zorientowanej aplikacji (z obs³ug± dziedziczenia testów, itp.).
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf examples/README
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
