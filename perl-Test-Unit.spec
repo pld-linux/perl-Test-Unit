@@ -1,16 +1,35 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Test
-%define	pnam	Unit
-Summary:	%{pdir}::%{pnam} perl module
-Summary(pl):	Modu³ perla %{pdir}::%{pnam}
+%define		pdir	Test
+%define		pnam	Unit
+Summary:	Test::Unit Perl module
+Summary(cs):	Modul Test::Unit pro Perl
+Summary(da):	Perlmodul Test::Unit
+Summary(de):	Test::Unit Perl Modul
+Summary(es):	Módulo de Perl Test::Unit
+Summary(fr):	Module Perl Test::Unit
+Summary(it):	Modulo di Perl Test::Unit
+Summary(ja):	Test::Unit Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	Test::Unit ÆÞ ¸ðÁÙ
+Summary(no):	Perlmodul Test::Unit
+Summary(pl):	Modu³ Perla Test::Unit
+Summary(pt):	Módulo de Perl Test::Unit
+Summary(pt_BR):	Módulo Perl Test::Unit
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Test::Unit
+Summary(sv):	Test::Unit Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Test::Unit
+Summary(zh_CN):	Test::Unit Perl Ä£¿é
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.24
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5
 BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	perl-Class-Inner
+BuildRequires:	perl-Devel-Symdump
+BuildRequires:	perl-Error
+BuildRequires:	perl-Tk
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,7 +41,7 @@ Erich Gamma.
 
 %description -l pl
 Ten pakiet udostêpnia szkielet do obs³ugi testów poszczególnych czê¶ci
-obiektowo zorientowanej aplikacji (z obs³ug± dziedziczenia testów, etc.).
+obiektowo zorientowanej aplikacji (z obs³ug± dziedziczenia testów, itp.).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -47,9 +66,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Change* AUTHORS
-%{perl_sitelib}/%{pdir}/*.pl
+%attr(755,root,root) %{perl_sitelib}/%{pdir}/*.pl
 %{perl_sitelib}/%{pdir}/*.pm
 %dir %{perl_sitelib}/%{pdir}/%{pnam}
 %{perl_sitelib}/%{pdir}/%{pnam}/*
 %{_mandir}/man3/*
-%{_examplesdir}/%{name}-%{version}
+%dir %{_examplesdir}/%{name}-%{version}
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/p*
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/tester.pl
+%{_examplesdir}/%{name}-%{version}/tester.png
+%{_examplesdir}/%{name}-%{version}/[RE]*
