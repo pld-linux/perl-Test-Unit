@@ -58,7 +58,7 @@ obiektowo zorientowanej aplikacji (z obs³ug± dziedziczenia testów, itp.).
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %{!?_without_tests:%{__make} test}
