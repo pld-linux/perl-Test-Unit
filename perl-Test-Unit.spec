@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Test
 %define		pnam	Unit
@@ -20,14 +24,23 @@ Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Test::Unit
 Summary(zh_CN):	Test::Unit Perl Ä£¿é
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.24
-Release:	2
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5
+%if %{!?_without_tests:1}0
+BuildRequires:	perl-Class-Inner
+BuildRequires:	perl-Devel-Symdump
+BuildRequires:	perl-Error
+%endif
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# optional (for Test::Unit::TkTestRunner only)
+# (or maybe create subpackage with TkTestRunner?)
+%define		_noautoreq	'perl(Tk.*)'
 
 %description
 This framework is intended to support unit testing in an object-oriented
@@ -45,7 +58,8 @@ obiektowo zorientowanej aplikacji (z obs³ug± dziedziczenia testów, itp.).
 %build
 perl Makefile.PL
 %{__make}
-#%{__make} test
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
