@@ -14,7 +14,7 @@ Summary(fr):	Module Perl Test::Unit
 Summary(it):	Modulo di Perl Test::Unit
 Summary(ja):	Test::Unit Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	Test::Unit ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul Test::Unit
+Summary(nb):	Perlmodul Test::Unit
 Summary(pl):	Modu³ Perla Test::Unit
 Summary(pt):	Módulo de Perl Test::Unit
 Summary(pt_BR):	Módulo Perl Test::Unit
