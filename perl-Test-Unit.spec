@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Test
-%define		pnam	Unit
+%define	pdir	Test
+%define	pnam	Unit
 Summary:	Test::Unit Perl module
 Summary(cs):	Modul Test::Unit pro Perl
 Summary(da):	Perlmodul Test::Unit
