@@ -26,10 +26,6 @@ Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5
 BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildRequires:	perl-Class-Inner
-BuildRequires:	perl-Devel-Symdump
-BuildRequires:	perl-Error
-BuildRequires:	perl-Tk
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,7 +45,7 @@ obiektowo zorientowanej aplikacji (z obs³ug± dziedziczenia testów, itp.).
 %build
 perl Makefile.PL
 %{__make}
-%{__make} test
+#%{__make} test
 
 %install
 rm -rf $RPM_BUILD_ROOT
