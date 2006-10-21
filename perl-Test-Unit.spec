@@ -23,13 +23,13 @@ Summary(sv):	Test::Unit Perlmodul
 Summary(uk):	Модуль для Perl Test::Unit
 Summary(zh_CN):	Test::Unit Perl дё©И
 Name:		perl-Test-Unit
-Version:	0.24
-Release:	4
+Version:	0.25
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e05b5e2f0cd2d9537d63b7a9471eed5d
+# Source0-md5:	bbd92a461996ae978ac378eae477bd79
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl-Class-Inner
@@ -87,6 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/p*
-%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/tester.pl
+%{_examplesdir}/%{name}-%{version}/fail_example.pm
 %{_examplesdir}/%{name}-%{version}/tester.png
 %{_examplesdir}/%{name}-%{version}/[RE]*
