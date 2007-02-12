@@ -6,22 +6,22 @@
 %define		pdir	Test
 %define		pnam	Unit
 Summary:	Test::Unit Perl module
-Summary(cs):	Modul Test::Unit pro Perl
-Summary(da):	Perlmodul Test::Unit
-Summary(de):	Test::Unit Perl Modul
-Summary(es):	Módulo de Perl Test::Unit
-Summary(fr):	Module Perl Test::Unit
-Summary(it):	Modulo di Perl Test::Unit
-Summary(ja):	Test::Unit Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	Test::Unit ÆŞ ¸ğÁÙ
-Summary(nb):	Perlmodul Test::Unit
-Summary(pl):	Modu³ Perla Test::Unit
-Summary(pt):	Módulo de Perl Test::Unit
-Summary(pt_BR):	Módulo Perl Test::Unit
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Test::Unit
-Summary(sv):	Test::Unit Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Test::Unit
-Summary(zh_CN):	Test::Unit Perl Ä£¿é
+Summary(cs.UTF-8):   Modul Test::Unit pro Perl
+Summary(da.UTF-8):   Perlmodul Test::Unit
+Summary(de.UTF-8):   Test::Unit Perl Modul
+Summary(es.UTF-8):   MÃ³dulo de Perl Test::Unit
+Summary(fr.UTF-8):   Module Perl Test::Unit
+Summary(it.UTF-8):   Modulo di Perl Test::Unit
+Summary(ja.UTF-8):   Test::Unit Perl ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+Summary(ko.UTF-8):   Test::Unit í„ ëª¨ì¤„
+Summary(nb.UTF-8):   Perlmodul Test::Unit
+Summary(pl.UTF-8):   ModuÅ‚ Perla Test::Unit
+Summary(pt.UTF-8):   MÃ³dulo de Perl Test::Unit
+Summary(pt_BR.UTF-8):   MÃ³dulo Perl Test::Unit
+Summary(ru.UTF-8):   ĞœĞ¾Ğ´ÑƒĞ»ÑŒ Ğ´Ğ»Ñ Perl Test::Unit
+Summary(sv.UTF-8):   Test::Unit Perlmodul
+Summary(uk.UTF-8):   ĞœĞ¾Ğ´ÑƒĞ»ÑŒ Ğ´Ğ»Ñ Perl Test::Unit
+Summary(zh_CN.UTF-8):   Test::Unit Perl æ¨¡å—
 Name:		perl-Test-Unit
 Version:	0.25
 Release:	1
@@ -50,9 +50,9 @@ development paradigm (with support for inheritance of tests etc.) and
 is derived from the JUnit testing framework for Java by Kent Beck and
 Erich Gamma.
 
-%description -l pl
-Ten pakiet udostêpnia szkielet do obs³ugi testów poszczególnych czê¶ci
-obiektowo zorientowanej aplikacji (z obs³ug± dziedziczenia testów, itp.).
+%description -l pl.UTF-8
+Ten pakiet udostÄ™pnia szkielet do obsÅ‚ugi testÃ³w poszczegÃ³lnych czÄ™Å›ci
+obiektowo zorientowanej aplikacji (z obsÅ‚ugÄ… dziedziczenia testÃ³w, itp.).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
