@@ -6,22 +6,22 @@
 %define		pdir	Test
 %define		pnam	Unit
 Summary:	Test::Unit Perl module
-Summary(cs.UTF-8):   Modul Test::Unit pro Perl
-Summary(da.UTF-8):   Perlmodul Test::Unit
-Summary(de.UTF-8):   Test::Unit Perl Modul
-Summary(es.UTF-8):   Módulo de Perl Test::Unit
-Summary(fr.UTF-8):   Module Perl Test::Unit
-Summary(it.UTF-8):   Modulo di Perl Test::Unit
-Summary(ja.UTF-8):   Test::Unit Perl モジュール
-Summary(ko.UTF-8):   Test::Unit 펄 모줄
-Summary(nb.UTF-8):   Perlmodul Test::Unit
-Summary(pl.UTF-8):   Moduł Perla Test::Unit
-Summary(pt.UTF-8):   Módulo de Perl Test::Unit
-Summary(pt_BR.UTF-8):   Módulo Perl Test::Unit
-Summary(ru.UTF-8):   Модуль для Perl Test::Unit
-Summary(sv.UTF-8):   Test::Unit Perlmodul
-Summary(uk.UTF-8):   Модуль для Perl Test::Unit
-Summary(zh_CN.UTF-8):   Test::Unit Perl 模块
+Summary(cs.UTF-8):	Modul Test::Unit pro Perl
+Summary(da.UTF-8):	Perlmodul Test::Unit
+Summary(de.UTF-8):	Test::Unit Perl Modul
+Summary(es.UTF-8):	Módulo de Perl Test::Unit
+Summary(fr.UTF-8):	Module Perl Test::Unit
+Summary(it.UTF-8):	Modulo di Perl Test::Unit
+Summary(ja.UTF-8):	Test::Unit Perl モジュール
+Summary(ko.UTF-8):	Test::Unit 펄 모줄
+Summary(nb.UTF-8):	Perlmodul Test::Unit
+Summary(pl.UTF-8):	Moduł Perla Test::Unit
+Summary(pt.UTF-8):	Módulo de Perl Test::Unit
+Summary(pt_BR.UTF-8):	Módulo Perl Test::Unit
+Summary(ru.UTF-8):	Модуль для Perl Test::Unit
+Summary(sv.UTF-8):	Test::Unit Perlmodul
+Summary(uk.UTF-8):	Модуль для Perl Test::Unit
+Summary(zh_CN.UTF-8):	Test::Unit Perl 模块
 Name:		perl-Test-Unit
 Version:	0.25
 Release:	1
