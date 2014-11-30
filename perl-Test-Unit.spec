@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Test
 %define		pnam	Unit
+%include	/usr/lib/rpm/macros.perl
 Summary:	Test::Unit Perl module
 Summary(cs.UTF-8):	Modul Test::Unit pro Perl
 Summary(da.UTF-8):	Perlmodul Test::Unit
@@ -30,13 +30,14 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	bbd92a461996ae978ac378eae477bd79
+URL:		http://search.cpan.org/dist/Test-Unit/
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Class-Inner
 BuildRequires:	perl-Devel-Symdump
 BuildRequires:	perl-Error
 %endif
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -45,14 +46,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_noautoreq	'perl(Tk.*)'
 
 %description
-This framework is intended to support unit testing in an object-oriented
-development paradigm (with support for inheritance of tests etc.) and
-is derived from the JUnit testing framework for Java by Kent Beck and
-Erich Gamma.
+This framework is intended to support unit testing in an
+object-oriented development paradigm (with support for inheritance of
+tests etc.) and is derived from the JUnit testing framework for Java
+by Kent Beck and Erich Gamma.
 
 %description -l pl.UTF-8
 Ten pakiet udostępnia szkielet do obsługi testów poszczególnych części
-obiektowo zorientowanej aplikacji (z obsługą dziedziczenia testów, itp.).
+obiektowo zorientowanej aplikacji (z obsługą dziedziczenia testów,
+itp.).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
