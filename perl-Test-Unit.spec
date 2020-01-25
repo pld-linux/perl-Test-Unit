@@ -4,7 +4,6 @@
 
 %define		pdir	Test
 %define		pnam	Unit
-%include	/usr/lib/rpm/macros.perl
 Summary:	Test::Unit Perl module
 Summary(cs.UTF-8):	Modul Test::Unit pro Perl
 Summary(da.UTF-8):	Perlmodul Test::Unit
